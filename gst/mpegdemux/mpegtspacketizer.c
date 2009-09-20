@@ -1978,7 +1978,7 @@ mpegts_try_discover_packet_size (MpegTSPacketizer * packetizer)
 {
   guint8 *dest;
   int i, pos, j;
-  const guint psizes[] = { MPEGTS_NORMAL_PACKETSIZE,
+  static const guint psizes[] = { MPEGTS_NORMAL_PACKETSIZE,
     MPEGTS_M2TS_PACKETSIZE,
     MPEGTS_DVB_ASI_PACKETSIZE,
     MPEGTS_ATSC_PACKETSIZE
